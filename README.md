@@ -8,7 +8,7 @@ The Demo Page is an interactive and user-friendly website showcasing the develop
 
 ```bash
 
-/DEMO
+/DemoPage
 │── /images # Folder containing website images
 │── /css # Stylesheets
 │── /js # JavaScript files
@@ -36,12 +36,12 @@ This project requires a modern web browser to run. No additional dependencies or
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/zinahalqeji/DEMO.git
+   git clone https://github.com/zinahalqeji/DemoPage.git
    ```
 
 2. **Navigate to the project directory:**
    ```bash
-   cd DEMO
+   cd DemoPage
    ```
 3. **Open `index.html`in your preferred web browser.**
 
