@@ -1,5 +1,7 @@
 Demo Page
+
 🌟 Overview
+
 The Demo Page is an interactive and user-friendly website showcasing the development of an AI-powered diagnostic software designed to enhance reconstructive surgery for gunshot wounds. This advanced system integrates 3D scanning, thermal imaging, and ultrasound Doppler sonography to predict tissue tension, assess blood supply, and model wound closure, ultimately improving surgical outcomes. The website features multiple pages, a responsive design, and interactive elements to ensure a seamless and informative user experience.
 
 📂 Project Structure
@@ -18,6 +20,7 @@ The Demo Page is an interactive and user-friendly website showcasing the develop
 ```
 
 ✨ Features
+
 ✅ **Modern & Responsive Design** – Built with HTML & CSS for a seamless user experience across devices.  
 ✅ **Interactive Elements** – JavaScript-powered functionalities for dynamic interactions.  
 ✅ **Easy Navigation** – Multiple pages including Home, About Us, Contact, and Information.
