@@ -10,40 +10,30 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:Jost:wght@400;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Jost', sans-serif;
-        }
-
         .slider-container {
             width: 100%;
-            height: 100vh;
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
             background-color: #f4f4f4;
-        }
-
-        .slider-images {
-            display: flex;
-            align-items: center;
-            gap: 21px;
+            padding: 20px;
         }
 
         .slider-img {
-            width: 200px;
+            width: 45%;
+            max-width: 300px;
             border-radius: 6px;
             cursor: pointer;
-            position: relative;
             transition: .7s ease;
             text-align: center;
+            background: white;
+            padding: 10px;
         }
 
         .slider-img model-viewer {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: 250px;
         }
 
         .slider-img h1 {
@@ -51,30 +41,70 @@
             font-weight: 700;
             color: black;
             margin-top: 10px;
-        }
-
-        .details {
-            display: none;
-            text-align: center;
-        }
-
-        .slider-img.active {
-            width: 400px;
-            height: 400px;
-        }
-
-        .slider-img.active model-viewer {
-            width: 100%;
-            height: 100%;
-        }
-
-        .slider-img.active .details {
-            display: block;
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    
+    <header>
+        <img src="Images/download.png" alt="Logo">
+        <div>
+            <h1>Advancing Medicine with Technology & AI</h1>
+            <h2>Demo</h2>
+        </div>
+        <div class="nav">
+            <div class="navigation">
+                <ul>
+                    <li class="list">
+                        <a href="index.html">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="AboutUs.html">
+                            <span class="icon">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </span>
+                            <span class="text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="information.html">
+                            <span class="icon">
+                                <ion-icon name="information-circle-outline"></ion-icon>
+                            </span>
+                            <span class="text">information</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="ContactUS.html">
+                            <span class="icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </span>
+                            <span class="text">Contact US</span>
+                        </a>
+                    </li>
+                    <div class="indicater"></div>
+                </ul>
+            </div>
+            <script>
+                const list=document.querySelectorAll('.list');
+                function activeLink(){
+                    list.forEach((item)=>
+                    item.classList.remove('active'));
+                    this.classList.add('active');
+                    }
+                list.forEach((item)=>
+                item.addEventListener('click',activeLink));
+            </script>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+    </header> 
+<main>
     <section><h3> The Begining of a new development </h3>
         <div class="gallery-wrap">
             <img src="Images/pleft.png" id="backBtn">
@@ -101,44 +131,29 @@
                  This cutting-edge handheld scanner offers wireless operation, real-time AI-driven processing, and high-resolution structured-light scanning, making it highly suitable for capturing detailed 3D models of wounds. <br>
                  By incorporating Artec Leo into our system, we can accurately assess wound dimensions, tissue structure, and healing progress. When combined with thermal imaging for blood flow analysis and ultrasound for deeper circulation insights, this technology will significantly enhance precision diagnostics and treatment planning for injured patients.
              </p>
-         </div>
+         </div> <br><br>
+         <h3> A Gallery of 3D models </h3>
+         <div> <p>
+            This gallery showcases a collection of 3D models designed to provide detailed representations of soft tissue gunshot wounds, with a focus on the complexities of injury and reconstruction. 
+            These models are crucial for understanding the size, shape, and severity of wounds, which is essential for planning effective reconstructive surgeries. As part of our broader research into improving outcomes for war-related injuries, these 3D models serve as a vital tool for both medical professionals and researchers.
+            They enable in-depth analysis and modeling of tissue healing processes, offering an unprecedented approach to understanding and treating soft tissue injuries caused by gunshot wounds.
+         </p></div>
          <section class="slider-container">
-            <div class="slider-images">
-                <div class="slider-img">
-                    <model-viewer src="wounded_hand.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
-                    <h1>Hand</h1>
-                    <div class="details">
-                        <p>Wounded hand</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <model-viewer src="a_human_bellly_with_g_0214221227_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
-                    <h1>Chest</h1>
-                    <div class="details">
-                        <p>Gunshot</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <model-viewer src="Gunshot_wounds_to_hum_0217145001_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
-                    <h1>Wounds</h1>
-                    <div class="details">
-                        <p>Explosion wounds</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <model-viewer src="burned_human_face__0217152725_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
-                    <h1>Face</h1>
-                    <div class="details">
-                        <p>Burnt face</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <model-viewer src="wounded_leg__0217152848_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
-                    <h1>Leg</h1>
-                    <div class="details">
-                        <p>Mine explosion</p>
-                    </div>
-                </div>
+            <div class="slider-img">
+                <model-viewer src="wounded_hand.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                <h1>Hand</h1>
+            </div>
+            <div class="slider-img">
+                <model-viewer src="a_human_bellly_with_g_0214221227_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                <h1>Chest</h1>
+            </div>
+            <div class="slider-img">
+                <model-viewer src="wounded_leg__0217152848_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                <h1>Leg</h1>
+            </div>
+            <div class="slider-img">
+                <model-viewer src="burned_human_face__0217152725_texture.glb" autoplay camera-controls disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                <h1>Face</h1>
             </div>
         </section>
     
@@ -199,5 +214,6 @@
                 scrollContainer.scrollLeft -= 900;
             });
            </script>
+</main>
 </body>
 </html>
