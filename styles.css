@@ -8,7 +8,7 @@
 }
 :root
 {
-    --clr:#66747d;
+    --clr:#636363;
 }
 .nav{
     margin-left: auto;
@@ -80,7 +80,7 @@
     top: -50%;
     width: 70px;
     height: 70px;
-    background: rgb(192, 52, 52);
+    background: rgb(193, 0, 42);
     border-radius: 50%;
     border: 6px solid var(--clr);
     transition: 0.5s;
@@ -131,7 +131,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #82888b, #66747d);
+    background: linear-gradient(135deg, #636363, #636363);
     color: white;
     display: flex;
     align-items: center;
@@ -154,7 +154,7 @@ header h1 {
 }
 section h3 {
     font-size: 1.1rem;
-    color: #ae061f;
+    color: #C1002A;
     padding-left: 10px;
     margin-bottom: 1rem;
 }
@@ -181,7 +181,7 @@ section {
 
 section h2 {
     font-size: 1.8rem;
-    color: #ae061f;
+    color: #C1002A;
     padding-left: 10px;
     margin-bottom: 1rem;
     clear: both;
@@ -204,7 +204,7 @@ ul li {
 
 .clearfix {
     overflow: auto;
-    border: 5px double rgb(110, 9, 11);
+    border: 5px double rgb(193, 0, 42);
     padding: 10px;
 }
 
@@ -215,7 +215,7 @@ ul li {
 .images {
     margin-top: 100px;
     position: relative;
-    border: 5px double rgb(110, 9, 11);
+    border: 5px double rgb(193, 0, 42);
     overflow: auto;
     width: 400px;
     height: 470px;
@@ -264,7 +264,7 @@ ul li {
 .game-right img{
     width: 200px;
     height: auto;
-    border: 3px solid rgb(104, 40, 40);
+    border: 3px solid rgb(193, 0, 42);
     box-shadow: 0 4px 8px rgb(62, 62, 84);
 }
 #game {
@@ -272,7 +272,7 @@ ul li {
     width: 360px;
     height: 360px;
     margin: 0 auto;
-    border: 5px double rgb(110, 9, 11);
+    border: 5px double rgb(193, 0, 42);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -282,7 +282,7 @@ ul li {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    border: 1px solid rgb(110, 9, 11);
+    border: 1px solid rgb(193, 0, 42);
     box-sizing: border-box;
 }
 /* About us */
