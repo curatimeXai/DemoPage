@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
-    
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:Jost:wght@400;700&display=swap');
 
@@ -74,7 +73,73 @@
     </style>
 </head>
 <body>
-    
+    <header>
+        <img src="Images/download.png" alt="Logo">
+        <div>
+            <h1>Advancing Medicine with Technology & AI</h1>
+            
+        </div>
+        <div class="nav">
+            <div class="navigation">
+                <ul>
+                    <li class="list">
+                        <a href="index.html">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="AboutUs.html">
+                            <span class="icon">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </span>
+                            <span class="text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="list" >
+                        <a href="information.html">
+                            <span class="icon">
+                                <ion-icon name="information-circle-outline"></ion-icon>
+                            </span>
+                            <span class="text" >Information</span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="demo.html">
+                            <span class="icon">
+                                <ion-icon name="play-circle-outline"></ion-icon>
+                            </span>
+                            <span class="text">Demo</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="ContactUS.html">
+                            <span class="icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </span>
+                            <span class="text">Contact US</span>
+                        </a>
+                    </li>
+                    <div class="indicater"></div>
+                </ul>
+            </div>
+            <script>
+                const list=document.querySelectorAll('.list');
+                function activeLink(){
+                    list.forEach((item)=>
+                item.classList.remove('active'));
+                this.classList.add('active');
+                }
+                list.forEach((item)=>
+            item.addEventListener('click',activeLink));
+            </script>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+    </header>
+    <main>
     <section><h3> The Begining of a new development </h3>
         <div class="gallery-wrap">
             <img src="Images/pleft.png" id="backBtn">
@@ -199,5 +264,6 @@
                 scrollContainer.scrollLeft -= 900;
             });
            </script>
+    </main>
 </body>
 </html>
