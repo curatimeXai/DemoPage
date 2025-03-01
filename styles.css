@@ -8,7 +8,7 @@
 }
 :root
 {
-    --clr:#66747d;
+    --clr:#636363;
 }
 .nav{
     margin-left: auto;
@@ -129,12 +129,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
-    color: #333;
+    color: #636363;
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #82888b, #66747d);
+    background: linear-gradient(135deg, #636363, #636363);
     color: white;
     display: flex;
     align-items: center;
