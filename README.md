@@ -10,10 +10,12 @@ The Demo Page is an interactive and user-friendly website showcasing the develop
 
 /DemoPage
 │── /images # Folder containing website images
+│── /3DModel # Folder containing 3D model
 │── /css # Stylesheets
 │── /js # JavaScript files
 │── index.html # Main homepage
 │── AboutUs.html # About Us page
+│── demo.html # 3D model page
 │── ContactUS.html # Contact Us page
 │── information.html # Additional information page
 │── README.md # Project documentation
@@ -65,7 +67,7 @@ Contributions are welcome! Follow these steps to contribute:
    ```
 4. Push to the branch:
    ```bash
-   git push origin feature/your-feature-name
+   git push origin master
    ```
 5. Open a Pull Request and describe your changes.
 
