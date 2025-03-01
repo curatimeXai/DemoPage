@@ -29,7 +29,7 @@
 }
 .navigation ul{
     display: flex;
-    width: 4000px;
+    width: 400px;
 }
 .navigation ul li{
     position: relative;
