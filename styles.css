@@ -19,7 +19,7 @@
 }
 .navigation{
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 70px;
     background: white;
     display: flex;
@@ -29,7 +29,7 @@
 }
 .navigation ul{
     display: flex;
-    width: 350px;
+    width: 4000px;
 }
 .navigation ul li{
     position: relative;
@@ -51,7 +51,7 @@
 .navigation ul li a .icon{
     position: relative;
     display: block;
-    line-height: 75px;
+    line-height: 80px;
     font-size: 2em;
     text-align: center;
     transition: 0.5s;
@@ -118,6 +118,9 @@
 }
 .navigation ul li:nth-child(4).active ~ .indicater{
     transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicater{
+    transform: translateX(calc(70px * 4));
 }
 
 /* General Styles */
