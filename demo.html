@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+    <script src="script.js"> </script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:Jost:wght@400;700&display=swap');
 
@@ -49,7 +50,6 @@
         <img src="Images/download.png" alt="Logo">
         <div>
             <h1>Advancing Medicine with Technology & AI</h1>
-            
         </div>
         <div class="nav">
             <div class="navigation">
@@ -221,8 +221,54 @@
                 backBtn.addEventListener("click", () => {
                     scrollContainer.style.scrollBehavior = "smooth"; 
                     scrollContainer.scrollLeft -= 900;
-                });
+           import os
+
+from src.wound_image import WoundImage
+
+
+# NOTE: It would be nice to create a small UI where you set input and output
+def main():
+    """
+    This is the demo algorithm, up to you to change it for tests.
+    """
+    input_dir = os.path.join("input")
+    output_dir = os.path.join("output", "demo")
+    wounds_output_dir = os.path.join(output_dir, "wounds")
+    csv_output_file = os.path.join(output_dir, "csv", "pwat_data.csv")
+    logging = True
+
+    # Keep in list only image files from 'input_dir'
+    wsis: list[WoundImage] = [
+        WoundImage(image_path=os.path.join(input_dir, file), logging=logging)
+        for file in os.listdir(input_dir)
+        if file.endswith((".png", ".jpg", ".jpeg"))
+    ]
+
+    # You can test anything on the WoundsImages
+    for wi in wsis:
+
+        # Create an output folder for each file format
+        # example: 'my_file.png' -> 'my_file_png'
+        current_dir = os.path.join(
+            wounds_output_dir, os.path.basename(
+                wi.image_path).replace(
+                ".", "_"))
+        extension = "." + wi.image_path.split(".")[-1]
+
+        # Save all data in the 'img_output_dir'
+        wi.save_all(
+            img_output_dir=current_dir,
+            csv_output_file=csv_output_file,
+            file_extension=extension)
+
+        # wi.show_all() # Show all data as a plot
+
+
+if __name__ == "__main__":
+    main()
+     });
                </script>
+              
     </main>
     </body>
     </html>
