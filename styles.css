@@ -19,8 +19,8 @@
 }
 .navigation{
     position: relative;
-    width: 400px;
-    height: 70px;
+    width: 430px;
+    height: 75px;
     background: white;
     display: flex;
     justify-content: center;
@@ -29,13 +29,13 @@
 }
 .navigation ul{
     display: flex;
-    width: 400px;
+    width: 430px;
 }
 .navigation ul li{
     position: relative;
     list-style: none;
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     z-index: 1;
 }
 .navigation ul li a{
@@ -59,6 +59,7 @@
 }
 .navigation ul li.active a .icon{
     transform: translateY(-32px);
+    
 }
 .navigation ul li a .text{
     position: absolute;
@@ -78,8 +79,8 @@
 .indicater{
     position: absolute;
     top: -50%;
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     background: rgb(193, 0, 42);
     border-radius: 50%;
     border: 6px solid var(--clr);
@@ -117,10 +118,13 @@
     transform: translateX(calc(70px * 2));
 }
 .navigation ul li:nth-child(4).active ~ .indicater{
-    transform: translateX(calc(70px * 3));
+    transform: translateX(calc(68px * 3));
 }
 .navigation ul li:nth-child(5).active ~ .indicater{
-    transform: translateX(calc(70px * 4));
+    transform: translateX(calc(66px * 4));
+}
+.navigation ul li:nth-child(6).active ~ .indicater{
+    transform: translateX(calc(68.5px * 5));
 }
 
 /* General Styles */
