@@ -11,6 +11,7 @@ The Demo Page is an interactive and user-friendly website showcasing the develop
 /DemoPage
 │── /images # Folder containing website images
 │── /3DModel # Folder containing 3D model
+│── /test_deepskin # Folder containing segmentation
 │── /css # Stylesheets
 │── /js # JavaScript files
 │── index.html # Main homepage
